@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Meal Plan Generator</title>
+</head>
+
+<body>
+    <h1>Meal Plan Generator</h1>
+    <form method="POST" action="{{ url_for('generate_meal_plan') }}">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required><br><br>
+        
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="">Select an option</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select><br><br>
+        
+        <label for="weight">Weight (in kg):</label>
+        <input type="number" id="weight" name="weight" required><br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        
+
+        <label for="diets">Dietary Preferences (comma-separated):</label>
+        <input type="text" id="diets" name="diets" required><br><br>
+
+        <label for="allergies">Food Allergies/Intolerances (comma-separated):</label>
+        <input type="text" id="allergies" name="allergies"><br><br>
+
+        <label for="calorie_goal">Daily Calorie Goal:</label>
+        <input type="number" id="calorie_goal" name="calorie_goal" required><br><br>
+
+        <label for="include_items">Items to Include (comma-separated):</label>
+        <input type="text" id="include_items" name="include_items"><br><br>
+
+        <label for="exclude_items">Items to Exclude (comma-separated):</label>
+        <input type="text" id="exclude_items" name="exclude_items"><br><br>
+
+        <label for="activity_level">Activity Level:</label>
+        <select id="activity_level" name="activity_level" required>
+            <option value="">Select an option</option>
+            <option value="low">Low</option>
+            <option value="moderate">Moderate</option>
+            <option value="high">High</option>
+        </select><br><br>
+
+        <label for="specific_wishes">Specific Dietary Wishes:</label>
+        <input type="text" id="specific_wishes" name="specific_wishes"><br><br>
+
+        <input type="submit" value="Generate Meal Plan">
+    </form>
+    <p>Don't want to miss out on your daily meal plan? <a href="{{ url_for('signup') }}">Sign up</a> to receive it via email.</p>
+</body>
+
+</html>

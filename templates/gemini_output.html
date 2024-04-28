@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Gemini Output</title>
+</head>
+
+<body>
+    <h1>Personalized Meal Plan</h1>
+    <pre>{{ gemini_output }}</pre>
+
+    <h1 class="padd">Meal Plan over mail</h1>
+    <style>
+        .padd {
+            padding: 20px;
+        }            
+    </style>
+    <form method="POST" action="{{ url_for('generate_meal_plan') }}">
+        <!-- ... (existing form fields) ... -->
+    
+        <label>
+            <input type="checkbox" name="receive_email" value="yes"> Receive meal plan report via email
+        </label><br><br>
+    
+        <input type="submit" value="Generate Meal Plan">
+    </form>
+</body>
+
+</html>

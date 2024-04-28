@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sign Up for Daily Meal Plans</title>
+</head>
+
+<body>
+    <h1>Sign Up for Daily Meal Plans</h1>
+    <form method="POST" action="{{ url_for('signup') }}">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        <input type="submit" value="Sign Up">
+    </form>
+</body>
+
+</html>
